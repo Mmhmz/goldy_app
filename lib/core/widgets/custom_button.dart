@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:goldy_app/core/constants/app_colors.dart';
 
-class CustomButtom extends StatelessWidget {
-  const CustomButtom({super.key, required this.text, required this.onPressed});
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    required this.color,
+  });
   final String text;
   final void Function()? onPressed;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width / 2,
         child: TextButton(
           style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
+            backgroundColor: WidgetStatePropertyAll(color),
             shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
@@ -21,7 +26,11 @@ class CustomButtom extends StatelessWidget {
           onPressed: onPressed,
           child: Text(
             text,
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+            ),
             textAlign: TextAlign.center,
           ),
         ),
