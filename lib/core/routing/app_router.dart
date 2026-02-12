@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goldy_app/core/persentation/home_screen.dart';
 import 'package:goldy_app/core/routing/routes.dart';
+import 'package:goldy_app/features/gold/presentation/screens/gold_screen.dart';
 
 //! للتحكم في الانتقالات بين الصفحات
 
@@ -11,6 +12,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) {
             return HomeScreen();
+          },
+        );
+
+      case AppRoutes.goldScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return GoldScreen();
           },
         );
 
