@@ -21,9 +21,11 @@ class HomeScreen extends StatelessWidget {
             text: AppStrings.gold,
             color: AppColors.goldColor,
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 16),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.silverscreen);
+            },
             text: AppStrings.silver,
             color: AppColors.silverColor,
           ),
