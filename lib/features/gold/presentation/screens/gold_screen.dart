@@ -58,7 +58,7 @@ class GoldScreen extends StatelessWidget {
                         text: state.goldModel.price.toString(),
                         color: AppColors.goldColor,
                       ),
-                      CustomText(text: ' USD', color: AppColors.goldColor),
+                      CustomText(text: ' EGP', color: AppColors.goldColor),
                     ],
                   ),
                 ],
