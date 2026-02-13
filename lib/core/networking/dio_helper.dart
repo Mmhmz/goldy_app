@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'api_constants.dart';
 
-class Diohelper {
+class DioHelper {
   static late Dio dio;
 
   static init() {
